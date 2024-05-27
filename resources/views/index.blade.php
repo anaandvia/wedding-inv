@@ -33,7 +33,7 @@
 	#header-overlay h1 {
 		margin-bottom: 20px;
 	}
-	
+
 	#imgd {
 		justify-content: center;
 		align-items: center;
@@ -54,22 +54,25 @@
 .fh5co-header .display-tc p{
  color: #fff;
 }
-		
+
 </style>
  <!-- Header Overlay -->
  <div id="header-overlay">
-		<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/OIG1.jpg);" data-stellar-background-ratio="0.5">
+		<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/WeddingRing.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
-								<h1>Dedi &amp; Fifa</h1>
-								<h2>We Are Getting Married</h2>
+								<div id="headerOverlay-title" style="margin-top: 5%">
+                                    <h4 style="color: #fff;">PLEASE JOIN US FOR THE</h4>
+                                    <h1>Wedding Of</h1>
+                                </div>
 								<div class="col-md-12 text-center mb-2">
-									<img id="imgd" src="images/poto.png" alt="couple" width="33%" class="img-circle-with-border img-responsive center-block">
+									<img id="imgd" src="images/poto-bw.png" alt="couple" width="33%" class="img-circle img-responsive center-block">
 								</div>
+								<h1>Dedi &amp; Afifah</h1>
 								<p><a id="start-button" href="#" class="btn btn-sm">Buka Undangan</a></p>
 							</div>
 						</div>
@@ -87,23 +90,51 @@
 
 <!-- Konten halaman -->
 <div id="content-section">
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/OIG1.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/WeddingRing.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Dedi &amp; Fifa</h1>
-							<h2>We Are Getting Married</h2>
+                            <div class="col-md-12 text-center mb-2">
+                                <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%" class="img-circle img-responsive center-block">
+                            </div>
+							<h1>Dedi &amp; Afifah</h1>
+							<h2>Kamis, 20 Juni 2024</h2>
+							<h2>"Kami akan Menikah,"
+                                <br>dan kami ingin Anda menjadi Bagian dari Hari Istimewa Kami!</h2>
+							<!--
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+                            <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							-->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+
+    <div id="fh5co-quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                    <div style="margin-top: 5%;">
+                        <p>السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                        <h2>Pernikahan Dedi & Afifah</h2>
+                        <p>Dengan penuh rasa syukur kepada Allah SWT, <br> kami dengan rendah hati mengundang Bapak/Ibu/Saudara/i <br> untuk hadir dalam pernikahan kami</p>
+                        <div class="col-md-12 text-center mb-2">
+                            <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%" class="img-circle img-responsive center-block">
+                        </div>
+                        <p>وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ </p>
+                        <p>Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
+                        <br>
+                        <p>Surah Ar-Rum Ayat 21</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<div id="fh5co-couple">
 		<div class="container">
@@ -140,7 +171,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/OIG1.jpg);">
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/WeddingRing.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -242,8 +273,8 @@
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-						
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/g1.jpg); "> 
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/g1.jpg); ">
 						<a href="#">
 						</a>
 					</li>
@@ -269,7 +300,7 @@
 							<a href="#" class="color-4">
 							</a>
 						</li>
-					</ul>		
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -384,7 +415,7 @@
 
 	<div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
-			
+
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>We Offer Services</h2>
@@ -427,14 +458,14 @@
 				</div>
 
 				<div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/OIG1.jpg); ">
+					<div class="fh5co-video fh5co-bg" style="background-image: url(images/WeddingRing.jpg); ">
 						<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a>
 						<div class="overlay"></div>
 					</div>
 				</div>
 			</div>
 
-			
+
 		</div>
 	</div>
 
@@ -478,20 +509,23 @@
 		const headerOverlay = document.getElementById('header-overlay');
 		const contentSection = document.getElementById('content-section');
 		const startButton = document.getElementById('start-button');
+		const htmlBody = $('html, body');
 
 		// Mengatur audio untuk tidak di-mute
 		audio.muted = false;
+		htmlBody.css('overflow', 'hidden');
 
 		// Menambahkan event listener ke tombol
 		startButton.addEventListener('click', () => {
 			// Hilangkan header overlay
 			headerOverlay.style.display = 'none';
-			
+
 			// Tampilkan konten halaman
 // 			setTimeout(function() {
 //   contentSection.style.display = 'block';
-// }, 10); 
-			
+// }, 10);
+		    htmlBody.css('overflow', 'auto');
+
 			// Mulai memutar audio
 			audio.play()
 				.then(() => {
@@ -503,26 +537,5 @@
 		});
 	});
 </script>
-	{{-- <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const audio = document.getElementById('autoplayAudio');
-            const playButton = document.getElementById('play-audio-button');
-
-            // Mengatur audio untuk tidak di-mute
-            audio.muted = false;
-
-            // Menambahkan event listener ke tombol
-            playButton.addEventListener('click', () => {
-                audio.play()
-                    .then(() => {
-                        console.log('Audio playback started successfully.');
-                        playButton.style.display = 'none'; // Sembunyikan tombol setelah diklik
-                    })
-                    .catch(error => {
-                        console.error('Error attempting to play audio:', error);
-                    });
-            });
-        });
-    </script> --}}
 
 	@endsection

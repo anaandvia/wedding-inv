@@ -57,6 +57,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 	<!-- Modernizr JS -->
 	<script src="{{ asset('/js/modernizr-2.6.2.min.js') }}"></script>
@@ -162,14 +163,13 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+    var d = new Date('2024-06-20T00:00:00');
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
+	simplyCountdown('.simply-countdown-one', {
+		year: d.getFullYear(),
+		month: d.getMonth() + 1,
+		day: d.getDate()
+	});
 
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({

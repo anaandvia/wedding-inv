@@ -108,13 +108,18 @@
 							}
 
 							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
+						},  k * 500, 'easeInOutExpo' );
 					});
 					
 				}, 100);
 				
 			}
-
+	
+			// Ketika scroll ke atas, atur ulang animasi
+			if( direction === 'up' && $(this.element).hasClass('animated-fast') ) {
+				$(this.element).removeClass('fadeIn fadeInLeft fadeInRight fadeInUp animated-fast');
+			}
+	
 		} , { offset: '85%' } );
 	};
 

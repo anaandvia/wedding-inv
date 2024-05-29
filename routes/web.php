@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TamuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,4 @@ Route::get('/gallery', function () {
 Route::get('/services', function () {
     return view('services');
 });
+Route::get('/invitation/{nama}', [TamuController::class,'show'])->name('tamu');

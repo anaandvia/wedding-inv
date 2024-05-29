@@ -241,7 +241,7 @@
 </style>
 <!-- Header Overlay -->
 <div id="header-overlay">
-    <header id="fh5co-header" class="fh5co-cover c2" role="banner" style="background-image:url(images/WeddingRing.jpg);"
+    <header id="fh5co-header" class="fh5co-cover c2" role="banner" style="background-image:url('{{ asset('images/WeddingRing.jpg') }}');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -254,12 +254,12 @@
                                 <h1>Wedding Of</h1>
                             </div>
                             <div class="col-md-12 text-center mb-2">
-                                <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%"
+                                <img id="imgd" src="{{ asset('images/poto-bw.png') }}" alt="couple" width="33%"
                                     class="img-circle img-responsive center-block">
                             </div>
                             <h1>Dedi &amp; Afifah</h1>
                             <div class="kepada">
-                            <p >Kepada</p><p id="kepadanama">Annisa dan Partner </p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
+                            <p >Kepada</p><p id="kepadanama"><?= isset($nama) ? ucwords($nama) : "Tamu" ?> dan Partner </p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
                             <p><a id="start-button" href="#" class="btn btn-sm"><i class="fas fa-envelope"></i> Buka Undangan</a></p>
                         </div>
                     </div>
@@ -292,8 +292,8 @@
             </div>
         </div>
     </nav>
-	{{-- <img src="images/atas5 (4).png" alt="background image" width="100%" class="img-fluid" style="position: absolute; top: 0px; z-index: 1;transform: scale(1) rotate(180deg);"> --}}
-    <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/WeddingRing.jpg);"
+	{{-- <img src="{{ asset('images/atas5 (4).png') }}" alt="background image" width="100%" class="img-fluid" style="position: absolute; top: 0px; z-index: 1;transform: scale(1) rotate(180deg);"> --}}
+    <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url('{{ asset('images/WeddingRing.jpg') }}');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -302,10 +302,10 @@
                     <div class="display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeIn">
                             <div class="col-md-12 text-center m-2">
-								{{-- <img src="images/bunga.png" alt="background image" class="img-fluid animated-img" style="position: absolute; top: -60px; right: 60px; z-index: 1;width: 220px; height: 180px; transform: scale(0.6) rotate(210deg);"> --}}
-                                <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%"
+								{{-- <img src="{{ asset('images/bunga.png') }}" alt="background image" class="img-fluid animated-img" style="position: absolute; top: -60px; right: 60px; z-index: 1;width: 220px; height: 180px; transform: scale(0.6) rotate(210deg);"> --}}
+                                <img id="imgd" src="{{ asset('images/poto-bw.png') }}" alt="couple" width="33%"
                                     class="img-circle img-responsive center-block">
-								{{-- <img src="images/bunga.png" alt="background image" class="img-responsive center-block animated-img"> --}}
+								{{-- <img src="{{ asset('images/bunga.png') }}" alt="background image" class="img-responsive center-block animated-img"> --}}
                             </div>
                             <h1>Dedi &amp; Afifah</h1>
                             <h2>Kamis, 20 Juni 2024</h2>
@@ -333,7 +333,7 @@
                         <p class="animate-box" data-animate-effect="scaleUp">Dengan penuh rasa syukur kepada Allah SWT, <br> kami dengan rendah hati mengundang
                             Bapak/Ibu/Saudara/i <br> untuk hadir dalam pernikahan kami</p>
                         <div class="col-md-12 text-center mb-2 animate-box" data-animate-effect="scaleUp">
-                            <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%"
+                            <img id="imgd" src="{{ asset('images/poto-bw.png') }}" alt="couple" width="33%"
                                 class="img-circle img-responsive center-block">
                         </div>
                         <p class="animate-box" data-animate-effect="scaleUp">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا
@@ -365,7 +365,7 @@
             <div class="couple-wrap animate-box">
                 <div class="couple-half animate-box" data-animate-effect="scaleUp">
                     <div class="groom">
-                        <img src="images/groom.jpeg" alt="groom" class="img-responsive">
+                        <img src="{{ asset('images/groom.jpeg') }}" alt="groom" class="img-responsive">
                     </div>
                     <div class="desc-groom">
                         <h3>Dedi Susanto</h3>
@@ -375,7 +375,7 @@
                 <p class="heart text-center"><i class="icon-heart2"></i></p>
                 <div class="couple-half animate-box" data-animate-effect="scaleUp">
                     <div class="bride">
-                        <img src="images/bride.jpeg" alt="groom" class="img-responsive">
+                        <img src="{{ asset('images/bride.jpeg') }}" alt="groom" class="img-responsive">
                     </div>
                     <div class="desc-bride">
                         <h3>Nur Hanani Afifah</h3>
@@ -386,7 +386,7 @@
         </div>
     </div>
 
-    <div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/WeddingRing.jpg);">
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url('{{ asset('images/WeddingRing.jpg') }}');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -438,7 +438,7 @@
                 <div class="col-md-12 col-md-offset-0">
                     <ul class="timeline animate-box">
                         <li class="animate-box">
-                            <div class="timeline-badge" style="background-image:url(images/bu1.png);"></div>
+                            <div class="timeline-badge" style="background-image:url('{{ asset('images/bu1.png') }}');"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">First We Meet</h3>
@@ -450,7 +450,7 @@
                             </div>
                         </li>
                         <li class="timeline-inverted animate-box">
-                            <div class="timeline-badge" style="background-image:url(images/bu2.png);"></div>
+                            <div class="timeline-badge" style="background-image:url('{{ asset('images/bu2.png') }}');"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">First Date</h3>
@@ -462,7 +462,7 @@
                             </div>
                         </li>
                         <li class="animate-box">
-                            <div class="timeline-badge" style="background-image:url(images/bu3.png);"></div>
+                            <div class="timeline-badge" style="background-image:url('{{ asset('images/bu3.png') }}');"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">In A Relationship</h3>
@@ -493,34 +493,34 @@
                     <ul id="fh5co-gallery-list">
 
                         <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g1b.jpg); ">
+                            style="background-image: url('{{ asset('images/g1b.jpg') }}'); ">
                             <a href="#">
                             </a>
                         </li>
                         <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g2b.jpg); ">
+                            style="background-image: url('{{ asset('images/g2b.jpg') }}'); ">
                             <a href="#" class="color-2">
                             </a>
                         </li>
                         <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g8b.jpg); ">
+                            style="background-image: url('{{ asset('images/g8b.jpg') }}'); ">
                             <a href="#" class="color-3">
                             </a>
                         </li>
                         <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g7b.jpg); ">
+                            style="background-image: url('{{ asset('images/g7b.jpg') }}'); ">
                             <a href="#" class="color-4">
                             </a>
                         </li>
 
                         <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g5b.jpg); ">
+                            style="background-image: url('{{ asset('images/g5b.jpg') }}'); ">
                             <a href="#" class="color-3">
                             </a>
                         </li>
 
-                        <li class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/g4b.jpg); ">
+                        <li class="one-third animate-box" data-animate-effect="fadeIn" 
+                        style="background-image: url('{{ asset('images/g4b.jpg') }}');">
                             <a href="#" class="color-4">
                             </a>
                         </li>
@@ -603,7 +603,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="images/couple-1.jpg" alt="user">
+                                            <img src="{{ asset('images/couple-1.jpg') }}" alt="user">
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -616,7 +616,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="images/couple-2.jpg" alt="user">
+                                            <img src="{{ asset('images/couple-2.jpg') }}" alt="user">
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -629,7 +629,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="images/couple-3.jpg" alt="user">
+                                            <img src="{{ asset('images/couple-3.jpg') }}" alt="user">
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -713,7 +713,7 @@
     </div>
 
 
-    <div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+    <div id="fh5co-started" class="fh5co-bg" style="background-image:url('{{ asset('images/img_bg_4.jpg') }}');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row animate-box">
@@ -747,7 +747,6 @@
     </div>
 </div>
 <script>
-    
     const audio = document.getElementById('autoplayAudio');
 
 	function restartAudio() {

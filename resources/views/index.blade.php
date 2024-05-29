@@ -8,14 +8,29 @@
 		height: 100%;
 		overflow: hidden;
 	} */
+
+    .iframe {
+        border: 2px solid #b89e14;
+        border-radius: 30px;
+        /* background-color: black; */
+        padding: 10px
+    }
+    iframe {
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
     .btn-gold {
-        color: black;
-        background-color: #b89e14
+        
+        background-color: rgb(57, 57, 57);
+        color: white;
     }
 
     .btn-gold:hover {
-        background-color: black;
         color: #b89e14;
+        background-color: white;
     }
 
     #header-overlay {
@@ -24,7 +39,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: fh5co-couple color: white;
+        background-color: black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -34,17 +49,6 @@
 
     #header-overlay h1 {
         margin-bottom: 20px;
-    }
-
-	#content-section {
-        /* display: none; */
-        opacity: 0; /* Mulai dengan opacity 0 */
-        transition: opacity 3s; /* Durasi animasi 1 detik */
-    }
-
-    #content-section.fade-in {
-        /* display: block; */
-        opacity: 1;
     }
 
     #imgd {
@@ -88,8 +92,17 @@
 		border-style: solid;
 		border-image: linear-gradient(to right, black, gold) 1;
 	}
+    #kepadanama{
+        margin-top: -10px;
+        font-family: "Poppins", Arial, sans-serif;
+        color: #fff;
+    }
 	
 	@media screen and (max-width: 768px) {
+        .iframe {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
 		.fh5co-cover {
 			height: 900px;
 		}
@@ -165,6 +178,18 @@
 			width: 58%; 
 			/* transform: scale(1) rotate(25deg); */
 		}
+        .kepada p{
+            font-size: 10px;
+        }
+
+        #kepadanama{
+            margin-top: -10px;
+            font-size: 14px;
+        }
+        #kepadasalam{
+            margin-top: -10px;
+        }
+        
 	}
 
 	@media screen and (max-width: 960px) {
@@ -188,7 +213,10 @@
             opacity: 0.8;
         }
     }
+    
 
+    
+    
     /* .animated-img {
         animation: fadeInOut 4s infinite;
     } */
@@ -230,6 +258,8 @@
                                     class="img-circle img-responsive center-block">
                             </div>
                             <h1>Dedi &amp; Afifah</h1>
+                            <div class="kepada">
+                            <p >Kepada</p><p id="kepadanama">Annisa dan Partner </p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
                             <p><a id="start-button" href="#" class="btn btn-sm"><i class="fas fa-envelope"></i> Buka Undangan</a></p>
                         </div>
                     </div>
@@ -247,6 +277,21 @@
 
 <!-- Konten halaman -->
 <div id="content-section">
+    <nav class="fh5co-nav" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                <ul>
+                    <li><a href="#fh5co-quote"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#fh5co-event"><i class="fas fa-calendar-day"></i></a></li>
+                    <li><a href="#fh5co-gallery"><i class="fas fa-film"></i></a></li>
+                    <li><a href="#fh5co-testimonial"><i class="fas fa-users"></i></a></li>
+                    <li><a href="#fh5co-services"><i class="fas fa-map-marked-alt"></i></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
 	{{-- <img src="images/atas5 (4).png" alt="background image" width="100%" class="img-fluid" style="position: absolute; top: 0px; z-index: 1;transform: scale(1) rotate(180deg);"> --}}
     <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/WeddingRing.jpg);"
         data-stellar-background-ratio="0.5">
@@ -268,7 +313,7 @@
                                 <br>dan kami ingin Anda menjadi Bagian dari Hari Istimewa Kami!</h2>
                             
 							<div class="simply-countdown simply-countdown-one"></div>
-                            <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+                            {{-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> --}}
 							
                         </div>
                     </div>
@@ -281,25 +326,25 @@
     <div id="fh5co-quote">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="scaleUp">
                     <div style="margin-top: 5%;">
-                        <p>السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
-                        <h2>Pernikahan <br>Dedi & Afifah</h2>
-                        <p>Dengan penuh rasa syukur kepada Allah SWT, <br> kami dengan rendah hati mengundang
+                        <p class="animate-box" data-animate-effect="scaleUp">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
+                        <h2 class="animate-box" data-animate-effect="scaleUp">Pernikahan <br>Dedi & Afifah</h2>
+                        <p class="animate-box" data-animate-effect="scaleUp">Dengan penuh rasa syukur kepada Allah SWT, <br> kami dengan rendah hati mengundang
                             Bapak/Ibu/Saudara/i <br> untuk hadir dalam pernikahan kami</p>
-                        <div class="col-md-12 text-center mb-2">
+                        <div class="col-md-12 text-center mb-2 animate-box" data-animate-effect="scaleUp">
                             <img id="imgd" src="images/poto-bw.png" alt="couple" width="33%"
                                 class="img-circle img-responsive center-block">
                         </div>
-                        <p>وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا
+                        <p class="animate-box" data-animate-effect="scaleUp">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا
                             وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
                             يَّتَفَكَّرُوْنَ </p>
-                        <p>Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu
+                        <p class="animate-box" data-animate-effect="scaleUp">Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu
                             dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu
                             rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
                             tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
                         <br>
-                        <p>Surah Ar-Rum Ayat 21</p>
+                        <p class="animate-box" data-animate-effect="scaleUp">Surah Ar-Rum Ayat 21</p>
                     </div>
                 </div>
             </div>
@@ -318,7 +363,7 @@
                 </div>
             </div> --}}
             <div class="couple-wrap animate-box">
-                <div class="couple-half">
+                <div class="couple-half animate-box" data-animate-effect="scaleUp">
                     <div class="groom">
                         <img src="images/groom.jpeg" alt="groom" class="img-responsive">
                     </div>
@@ -328,7 +373,7 @@
                     </div>
                 </div>
                 <p class="heart text-center"><i class="icon-heart2"></i></p>
-                <div class="couple-half">
+                <div class="couple-half animate-box" data-animate-effect="scaleUp">
                     <div class="bride">
                         <img src="images/bride.jpeg" alt="groom" class="img-responsive">
                     </div>
@@ -355,14 +400,14 @@
                     <div class="display-tc">
                         <div class="col-md-10 col-md-offset-1">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <div class="event-wrap animate-box">
+                                <div class="event-wrap animate-box" data-animate-effect="scaleUp">
                                     <h3>Resepsi Pernikahan</h3>
-                                    <div class="event-col">
+                                    <div class="event-col animate-box" data-animate-effect="scaleUp">
                                         <i class="icon-clock"></i>
                                         <span>13:00 PM</span>
                                         <span>SELESAI</span>
                                     </div>
-                                    <div class="event-col">
+                                    <div class="event-col animate-box" data-animate-effect="scaleUp">
                                         <i class="icon-calendar"></i>
                                         <span>KAMIS, 20 JUNI</span>
                                         <span>2024</span>
@@ -370,6 +415,7 @@
                                     <p>Kediaman Mempelai Wanita</p>
                                     <p>Perum Griya Permata Blok C 171, Kel. Sungai Langkai, Kec. Sagulung, Kota Batam,
                                         Provinsi Kepulauan Riau</p>
+                                    <a class="btn btn-default btn-sm btn-gold" href="https://maps.app.goo.gl/EZwFYNP9dbV7ooxD7">Lokasi Acara</a>
                                 </div>
                             </div>
                         </div>
@@ -484,7 +530,7 @@
         </div>
     </div>
 
-    <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+    {{-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -539,7 +585,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div id="fh5co-testimonial">
         <div class="container">
@@ -606,13 +652,17 @@
 
             <div class="row animate-box">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>We Offer Services</h2>
-                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident.
-                        Odit ab aliquam dolor eius.</p>
+                    <h2>Lokasi Pernikahan</h2>
+                    <p>Perum Griya Permata Blok C no 171 rt09, RW.09, Kel. Sungai Langkai, Kec. Sagulung, Kota Batam, Provinsi Kepulauan Riau</p>
+                </div>
+            </div>
+            <div class="row iframe">
+                <div class="col-lg-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.16226965052!2d103.95463630849294!3d1.039048262495912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcfb192663%3A0x16d731b75e274857!2sDe.cikin!5e0!3m2!1sid!2sid!4v1716955757111!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-6">
                     <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
                         <span class="icon">
@@ -656,7 +706,7 @@
                         <div class="overlay"></div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
         </div>
@@ -697,6 +747,7 @@
     </div>
 </div>
 <script>
+    
     const audio = document.getElementById('autoplayAudio');
 
 	function restartAudio() {
@@ -725,13 +776,13 @@
         // Menambahkan event listener ke tombol
         startButton.addEventListener('click', () => {
             // Hilangkan header overlay
-            headerOverlay.style.display = 'none';
-			// Tampilkan elemen sebelum memulai animasi
-            setTimeout(() => {
-                contentSection.classList.add('fade-in');
-            }, 0);
-            // Tampilkan konten halaman
-            htmlBody.css('overflow', 'auto');
+            headerOverlay.classList.add('slideDown'); // Tambahkan class 'slideDown'
+            headerOverlay.addEventListener('transitionend', () => {
+                // Sembunyikan elemen setelah animasi selesai
+                headerOverlay.style.display = 'none';
+                // Kembalikan overflow ke 'auto'
+                htmlBody.css('overflow', 'auto');
+            }, { once: true });
 
             // Mulai memutar audio
             audio.play()

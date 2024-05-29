@@ -42,6 +42,38 @@ Copyright (c) 2015 Daniel Eden
   animation-duration: .75s;
 }
 
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scaleUp {
+  animation: scaleUp 1s ease-out forwards;
+  /* `forwards` memastikan elemen tetap dalam keadaan akhir dari animasi */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+.slideDown {
+  animation: slideDown 2s ease-out forwards;
+  /* Anda bisa mengatur durasi dan timing function sesuai keinginan */
+}
+
 @-webkit-keyframes bounce {
   from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);

@@ -84,44 +84,42 @@
 
 	var contentWayPoint = function() {
 		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-				
+		$('.animate-box').waypoint(function(direction) {
+			if (direction === 'down' && !$(this.element).hasClass('animated-fast')) {
 				i++;
-
 				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
+				setTimeout(function() {
+					$('body .animate-box.item-animate').each(function(k) {
 						var el = $(this);
-						setTimeout( function () {
+						setTimeout(function() {
 							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
+							if (effect === 'fadeIn') {
 								el.addClass('fadeIn animated-fast');
-							} else if ( effect === 'fadeInLeft') {
+							} else if (effect === 'fadeInLeft') {
 								el.addClass('fadeInLeft animated-fast');
-							} else if ( effect === 'fadeInRight') {
+							} else if (effect === 'fadeInRight') {
 								el.addClass('fadeInRight animated-fast');
+							} else if (effect === 'scaleUp') {
+								el.addClass('scaleUp');
+							} else if (effect === 'slideDown') {
+								el.addClass('slideDown');
 							} else {
 								el.addClass('fadeInUp animated-fast');
 							}
-
 							el.removeClass('item-animate');
-						},  k * 500, 'easeInOutExpo' );
+						}, k * 500, 'easeInOutExpo');
 					});
-					
 				}, 100);
-				
 			}
 	
 			// Ketika scroll ke atas, atur ulang animasi
-			if( direction === 'up' && $(this.element).hasClass('animated-fast') ) {
-				$(this.element).removeClass('fadeIn fadeInLeft fadeInRight fadeInUp animated-fast');
+			if ((direction === 'up' && $(this.element).hasClass('animated-fast')) || (direction === 'up' && !$(this.element).hasClass('animated-fast'))) {
+				$(this.element).removeClass('fadeIn fadeInLeft fadeInRight fadeInUp scaleUp slideDown animated-fast');
 			}
-	
-		} , { offset: '85%' } );
+		}, { offset: '85%' });
 	};
+	
+	
 
 
 	var dropdown = function() {

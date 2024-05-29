@@ -747,6 +747,25 @@
     </div>
 </div>
 <script>
+    $(document).ready(function(){
+        // Tambahkan event click ke tautan
+        $('a[href*="#"]').on('click', function(event) {
+            // Pastikan link bukan link yang kosong
+            if (this.hash !== "") {
+                // Hentikan aksi default
+                event.preventDefault();
+                // Simpan hash
+                var hash = this.hash;
+                // Animasikan gulir ke hash
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000, function(){
+                    // Tambahkan hash ke URL setelah gulir (opsional)
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
     const audio = document.getElementById('autoplayAudio');
 
 	function restartAudio() {

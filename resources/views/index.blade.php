@@ -15,6 +15,11 @@
         /* background-color: black; */
         padding: 10px
     }
+    .iframe2 {
+        padding: 10px;
+        margin-top: -2%;
+
+    }
     iframe {
         right: 0;
         left: 0;
@@ -99,7 +104,7 @@
     }
 	
 	@media screen and (max-width: 768px) {
-        .iframe {
+        .iframe, .iframe2 {
             margin-left: 20px;
             margin-right: 20px;
         }
@@ -237,6 +242,63 @@
         animation: zoomInOut 4s infinite;
     }
 	 */
+        /* section wedding gift */
+        .card {
+            border: 1px solid #b89e14;
+            border-radius: 10px;
+            padding: 20px;
+            /* display: flex;
+            align-items: center; */
+            max-width: 400px;
+            margin: auto;
+            background-image: url('{{ asset("images/bgcard.png") }}');
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        #atm{
+            width: 50%;
+            max-width: 150px;
+        }
+        #chip{
+            width: 50%;
+            max-width: 50px; 
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .card-details p {
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            margin-top: 10px; /* Jarak antara nomor dan tombol */
+        }
+
+        .card button {
+            padding: 8px 8px;
+            background-color: #b89e14;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: flex-end;
+            margin-left: 10px; /* Jarak antara teks dan tombol */
+        }
+
+        .card button:hover {
+            background-color: #766616;
+        }
+        /* end section wedding gift */
 
 </style>
 <!-- Header Overlay -->
@@ -260,7 +322,7 @@
                             <h1>Dedi &amp; Afifah</h1>
                             <div class="kepada">
                             <p >Kepada</p><p id="kepadanama"><?= isset($nama) ? ucwords($nama) : "Tamu" ?> dan Partner </p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
-                            <p><a id="start-button" href="#" class="btn btn-sm"><i class="fas fa-envelope"></i> Buka Undangan</a></p>
+                            <p><a id="start-button" href="#" class="btn btn-sm"><i class="fas fa-envelope-open-text"></i>  Buka Undangan</a></p>
                         </div>
                     </div>
                 </div>
@@ -529,65 +591,29 @@
             </div>
         </div>
     </div>
-
-    {{-- <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
-        <div class="overlay"></div>
+    
+    <div id="fh5co-services2">
         <div class="container">
-            <div class="row">
-                <div class="display-t">
-                    <div class="display-tc">
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                                <span class="icon">
-                                    <i class="icon-users"></i>
-                                </span>
 
-                                <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
-                                    data-refresh-interval="50">1</span>
-                                <span class="counter-label">Estimated Guest</span>
-
-                            </div>
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Wedding Gift</h2>
+                    <p>Terima kasih atas dukungan Anda dalam perayaan cinta kami. Kehadiran dan dukungan Anda sudah menjadi hadiah yang sangat berarti bagi kami. Jika Anda ingin memberikan hadiah, kami sangat menghargainya.</p>
+                </div>
+            </div>
+            <div class="row iframe2">
+                    <div class="card card-bank">
+                            <img id="atm" src="{{ asset('images/mandiri.png') }}" alt=""><br>
+                            <img id="chip" src="{{ asset('images/chip.png') }}" alt="">
+                        <div class="card-details">
+                            <div class="button-container">
+                            <p id="textToCopy">1090020938783<br>Nur Hanani Afifah</p><button id="copyButton" onclick="copyText()"><i class="fas fa-copy"></i> Salin</button></div>
                         </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                                <span class="icon">
-                                    <i class="icon-user"></i>
-                                </span>
-
-                                <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
-                                    data-refresh-interval="50">1</span>
-                                <span class="counter-label">We Catter</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                                <span class="icon">
-                                    <i class="icon-calendar"></i>
-                                </span>
-                                <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
-                                    data-refresh-interval="50">1</span>
-                                <span class="counter-label">Events Done</span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 animate-box">
-                            <div class="feature-center">
-                                <span class="icon">
-                                    <i class="icon-clock"></i>
-                                </span>
-
-                                <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
-                                    data-refresh-interval="50">1</span>
-                                <span class="counter-label">Hours Spent</span>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div> --}}
-
-    <div id="fh5co-testimonial">
+    </div>
+    <div id="fh5co-testimonial" class="fh5co-section-gray">
         <div class="container">
             <div class="row">
                 <div class="row animate-box">
@@ -647,7 +673,7 @@
         </div>
     </div>
 
-    <div id="fh5co-services" class="fh5co-section-gray">
+    <div id="fh5co-services">
         <div class="container">
 
             <div class="row animate-box">
@@ -661,54 +687,6 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.16226965052!2d103.95463630849294!3d1.039048262495912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcfb192663%3A0x16d731b75e274857!2sDe.cikin!5e0!3m2!1sid!2sid!4v1716955757111!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
-            {{-- <div class="row">
-                <div class="col-md-6">
-                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                        <span class="icon">
-                            <i class="icon-calendar"></i>
-                        </span>
-                        <div class="feature-copy">
-                            <h3>We Organized Events</h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque
-                                dicta adipisci architecto culpa amet.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                        <span class="icon">
-                            <i class="icon-image"></i>
-                        </span>
-                        <div class="feature-copy">
-                            <h3>Photoshoot</h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque
-                                dicta adipisci architecto culpa amet.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-                        <span class="icon">
-                            <i class="icon-video"></i>
-                        </span>
-                        <div class="feature-copy">
-                            <h3>Video Editing</h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque
-                                dicta adipisci architecto culpa amet.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-md-6 animate-box">
-                    <div class="fh5co-video fh5co-bg" style="background-image: url(images/WeddingRing.jpg); ">
-                        <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
-                                class="icon-video2"></i></a>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-            </div> --}}
-
-
         </div>
     </div>
 
@@ -766,18 +744,40 @@
             }
         });
     });
+
+    // function copy no rek
+    function copyText() {
+        // Mendapatkan teks dari elemen
+        var fullText = document.getElementById("textToCopy").textContent;
+
+        // Mencari dan mengambil angka dari teks
+        var numberOnly = fullText.match(/\d+/)[0];
+
+        // Menyalin teks ke clipboard
+        navigator.clipboard.writeText(numberOnly);
+
+        // Mengubah teks tombol menjadi "Berhasil Menyalin"
+        var copyButton = document.getElementById("copyButton");
+        copyButton.textContent = "Berhasil Menyalin";
+
+        // Kembalikan teks tombol menjadi "Salin" setelah 5 detik
+        setTimeout(function() {
+            copyButton.textContent = "Salin";
+        }, 500);
+    }
+
     const audio = document.getElementById('autoplayAudio');
 
 	function restartAudio() {
-					audio.currentTime = 0; // Mengatur waktu audio kembali ke awal
-					audio.play()
-						.then(() => {
-							console.log('Audio playback restarted successfully.');
-						})
-						.catch(error => {
-							console.error('Error attempting to restart audio:', error);
-						});
-				}
+		audio.currentTime = 0; // Mengatur waktu audio kembali ke awal
+		audio.play()
+			.then(() => {
+				console.log('Audio playback restarted successfully.');
+			})
+			.catch(error => {
+				console.error('Error attempting to restart audio:', error);
+			});
+	}
 	audio.addEventListener('ended', restartAudio);
 
     document.addEventListener('DOMContentLoaded', (event) => {

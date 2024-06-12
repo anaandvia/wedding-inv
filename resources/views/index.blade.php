@@ -341,7 +341,7 @@
                             </div>
                             <h1>Dedi &amp; Afifah</h1>
                             <div class="kepada">
-                            <p >Kepada</p><p id="kepadanama"><?= isset($nama) ? ucwords($nama) : "Tamu" ?> dan Partner </p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
+                            <p >Kepada</p><p id="kepadanama"><?= isset($nama) ? ucwords($nama) : "Tamu" ?></p> <p id="kepadasalam">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami</p></div>
                             <p><a id="start-button" href="#" class="btn btn-sm"><i class="fas fa-envelope-open-text"></i>  Buka Undangan</a></p>
                         </div>
                     </div>

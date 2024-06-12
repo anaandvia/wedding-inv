@@ -8,7 +8,9 @@
 		height: 100%;
 		overflow: hidden;
 	} */
-
+    .mt-2 {
+        margin-top: 30px;
+    }
     .iframe {
         border: 2px solid #b89e14;
         border-radius: 30px;
@@ -26,6 +28,19 @@
         width: 100%;
     }
 
+    .bubble-chat {
+        max-width: 100%;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .bubble-chat .name {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
 
     .btn-gold {
         
@@ -36,6 +51,10 @@
     .btn-gold:hover {
         color: #b89e14;
         background-color: white;
+    }
+
+    .text-white {
+        color: white;
     }
 
     #header-overlay {
@@ -120,9 +139,10 @@
 		#headerOverlay-title{
 			margin-top: 0;
 		}
-		.fh5co-heading p{
+		.fh5co-heading p, #fh5co-testimonial .wrap-testimony .testimony-slide blockquote p{
 			font-size: 12px;
 		}
+        
 		#fh5co-couple .container {
 			margin: 10px;
 			padding-top: 7%;
@@ -487,6 +507,139 @@
         </div>
     </div>
 
+    <div id="fh5co-services">
+        <div class="container">
+
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Lokasi Pernikahan</h2>
+                    <p>Perum Griya Permata Blok C no 171 RT.09, RW.09, Kel. Sungai Langkai, Kec. Sagulung, Kota Batam, Provinsi Kepulauan Riau</p>
+                </div>
+            </div>
+            <div class="row iframe">
+                <div class="col-lg-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.16226965052!2d103.95463630849294!3d1.039048262495912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcfb192663%3A0x16d731b75e274857!2sDe.cikin!5e0!3m2!1sid!2sid!4v1716955757111!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="fh5co-services2"  class="fh5co-section-gray">
+        <div class="container">
+
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Wedding Gift</h2>
+                    <p>Terima kasih atas dukungan Anda dalam perayaan cinta kami. Kehadiran dan dukungan Anda sudah menjadi hadiah yang sangat berarti bagi kami. Jika Anda ingin memberikan hadiah, kami sangat menghargainya.</p>
+                </div>
+            </div>
+            <div class="row iframe2">
+                    <div class="card card-bank">
+                            <img id="atm" src="{{ asset('images/mandiri.png') }}" alt=""><br>
+                            <img id="chip" src="{{ asset('images/chip.png') }}" alt="">
+                        <div class="card-details">
+                            <div class="button-container">
+                            <p id="textToCopy">1090020938783<br>Nur Hanani Afifah</p><button id="copyButton" onclick="copyText()"><i class="fas fa-copy"></i> Salin</button></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-started" class="fh5co-bg" style="background-image:url('{{ asset('images/img_bg_4.jpg') }}');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Are You Attending?</h2>
+                    <p>Beri tahu kehadiran anda.</p>
+                </div>
+            </div>
+            <div class="row animate-box">
+                <div class="col-md-10 col-md-offset-1">
+                    <form class="form-inline" action="{{ route('undangan.store') }}" method="POST">
+                        @csrf
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Nama</label>
+                                <input type="name" name="name" class="form-control" id="name" placeholder="Name" value="<?= $nama ?>" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" class="sr-only">Ucapan</label>
+                                <textarea id="comment" name="comment" required class="form-control" placeholder="Ucapan"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" class="sr-only">Kehadiran</label>
+                                <input type="radio" id="attend_yes" name="attend" value="1" required>
+                                <label for="attend_yes" class="text-white">Hadir</label>
+                                <input type="radio" id="attend_no" name="attend" value="0" required>
+                                <label for="attend_no" class="text-white">Tidak</label>
+                            </div>
+                            <button type="submit" class="btn btn-default btn-block">I am Attending</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-testimonial" class="fh5co-section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <span>Best Wishes</span>
+                        <h2>Friends Wishes</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 animate-box text-center">
+                        <div class="wrap-testimony">
+                            <div class="owl-carousel-fullwidth">
+                                @foreach($undangan->take(3) as $comment)
+                                <div class="item">
+                                    <div class="testimony-slide active text-center">
+                                        <!-- Tampilkan nama dan sumber komentar -->
+                                        <span>{{ $comment->name }} <br> {{ $comment->attend == 1 ? "(Hadir)" : "(Tidak Hadir)" }}</span>
+                                        <!-- Tampilkan komentar -->
+                                        <blockquote>
+                                            <p class="comment">"{{ $comment->comment }}"</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <button href="#model" class="btn btn-default mt-2" data-toggle="modal" data-target="#allCommentsModal">Lihat semua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="allCommentsModal" tabindex="-1" role="dialog" aria-labelledby="allCommentsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document"> <!-- Tambahkan kelas modal-dialog-scrollable -->
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="allCommentsModalLabel">Semua Ucapan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="overflow-y: auto;"> <!-- Tambahkan properti overflow-y: auto; -->
+                @foreach($undangan as $comment)
+                <div class="bubble-chat">
+                    <div class="name">{{ $comment->name }} {{ $comment->attend == 1 ? "(Hadir)" : "(Tidak Hadir)" }}</div>
+                    <div class="comment">{{ $comment->comment }}</div>
+                </div>
+                @endforeach
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <div id="fh5co-couple-story">
         <div class="container">
             <div class="row">
@@ -587,138 +740,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="fh5co-services2">
-        <div class="container">
-
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>Wedding Gift</h2>
-                    <p>Terima kasih atas dukungan Anda dalam perayaan cinta kami. Kehadiran dan dukungan Anda sudah menjadi hadiah yang sangat berarti bagi kami. Jika Anda ingin memberikan hadiah, kami sangat menghargainya.</p>
-                </div>
-            </div>
-            <div class="row iframe2">
-                    <div class="card card-bank">
-                            <img id="atm" src="{{ asset('images/mandiri.png') }}" alt=""><br>
-                            <img id="chip" src="{{ asset('images/chip.png') }}" alt="">
-                        <div class="card-details">
-                            <div class="button-container">
-                            <p id="textToCopy">1090020938783<br>Nur Hanani Afifah</p><button id="copyButton" onclick="copyText()"><i class="fas fa-copy"></i> Salin</button></div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="fh5co-testimonial" class="fh5co-section-gray">
-        <div class="container">
-            <div class="row">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <span>Best Wishes</span>
-                        <h2>Friends Wishes</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 animate-box">
-                        <div class="wrap-testimony">
-                            <div class="owl-carousel-fullwidth">
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/couple-1.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia
-                                                and Consonantia, there live the blind texts. Separated they live in
-                                                Bookmarksgrove right at the coast of the Semantics"</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/couple-2.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia
-                                                and Consonantia, at the coast of the Semantics, a large language ocean."
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/couple-3.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>"Far far away, far from the countries Vokalia and Consonantia, there live
-                                                the blind texts. Separated they live in Bookmarksgrove right at the
-                                                coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="fh5co-services">
-        <div class="container">
-
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>Lokasi Pernikahan</h2>
-                    <p>Perum Griya Permata Blok C no 171 rt09, RW.09, Kel. Sungai Langkai, Kec. Sagulung, Kota Batam, Provinsi Kepulauan Riau</p>
-                </div>
-            </div>
-            <div class="row iframe">
-                <div class="col-lg-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.16226965052!2d103.95463630849294!3d1.039048262495912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dfcfb192663%3A0x16d731b75e274857!2sDe.cikin!5e0!3m2!1sid!2sid!4v1716955757111!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="fh5co-started" class="fh5co-bg" style="background-image:url('{{ asset('images/img_bg_4.jpg') }}');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                    <h2>Are You Attending?</h2>
-                    <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
-                </div>
-            </div>
-            <div class="row animate-box">
-                <div class="col-md-10 col-md-offset-1">
-                    <form class="form-inline">
-                        <div class="col-md-4 col-sm-4">
-                            <div class="form-group">
-                                <label for="name" class="sr-only">Name</label>
-                                <input type="name" class="form-control" id="name" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <button type="submit" class="btn btn-default btn-block">I am Attending</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

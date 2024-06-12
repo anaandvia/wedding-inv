@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TamuController;
+use App\Http\Controllers\UndanganController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,4 @@ Route::get('/services', function () {
     return view('services');
 });
 Route::get('/invitation/{nama}', [TamuController::class,'show'])->name('tamu');
+Route::post('/invitation', [UndanganController::class, 'store'])->name('undangan.store');

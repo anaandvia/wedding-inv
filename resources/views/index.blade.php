@@ -539,7 +539,7 @@
                             <img id="chip" src="{{ asset('images/chip.png') }}" alt="">
                         <div class="card-details">
                             <div class="button-container">
-                            <p id="textToCopy">1090020938783<br>Nur Hanani Afifah</p><button id="copyButton" onclick="copyText()"><i class="fas fa-copy"></i> Salin</button></div>
+                            <p id="textToCopy">1090018784322<br>Nur Hanani Afifah</p><button id="copyButton" onclick="copyText()"><i class="fas fa-copy"></i> Salin</button></div>
                         </div>
                 </div>
             </div>
@@ -562,7 +562,7 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group">
                                 <label for="name" class="sr-only">Nama</label>
-                                <input type="name" name="name" class="form-control" id="name" placeholder="Name" value="<?= $nama ?>" readonly>
+                                <input type="name" name="name" class="form-control" id="name" placeholder="Name" value="<?= $nama ?>">
                             </div>
                             <div class="form-group">
                                 <label for="comment" class="sr-only">Ucapan</label>
